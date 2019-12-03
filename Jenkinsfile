@@ -20,7 +20,6 @@ String cronExpression = "* * * * *";
   ])
   pipeline{
       agent any
-      {
           stages{
               stage("Build"){
                   steps{
@@ -28,6 +27,5 @@ String cronExpression = "* * * * *";
                   }
           }
       }
-  }
   }
 
