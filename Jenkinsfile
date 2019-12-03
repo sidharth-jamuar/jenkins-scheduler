@@ -28,7 +28,7 @@ String cronExpression = "* * * * *";
               }
             stage("Test"){
                 steps{
-                    sh 'node ./schedules.js'
+                    sh 'node ./constants/schedules.js'
                 }
             }
             
