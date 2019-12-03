@@ -26,12 +26,6 @@ String cronExpression = "* * * * *";
                   steps{
                       sh 'echo "Hello Schedule"'
                   }
-              }
-              stage("Test"){
-                  steps{
-                      sh ' echo "New World"'
-                  }
-              }
           }
       }
   }
