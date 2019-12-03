@@ -1,11 +1,10 @@
-
 #!/usr/bin/env groovy
 def appName = 'scheduleDynamoDBToSnowFlake';
 def appVersion = '1.0.0';
 // Run during a maintenance window for the master branch
 // Once every 8:00 a.m. TODO: scheduling would be once a day
 
-String cronExpression = "* * * * * ";
+String cronExpression = "* * * * *";
   properties([
     parameters([
       booleanParam(
@@ -37,7 +36,6 @@ String cronExpression = "* * * * * ";
                     sh '''
                     cd constants
                     node schedules.js
-
                     '''
                 }
             }
