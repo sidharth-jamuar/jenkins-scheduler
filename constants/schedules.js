@@ -1,2 +1,3 @@
-'use strict';
-export const  scheduleDynamoDBToSnowflake="* * * * *";
+const  scheduleDynamoDBToSnowflake="* * * * *";
+module.exports=scheduleDynamoDBToSnowflake;
+console.log("hi");

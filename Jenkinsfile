@@ -5,7 +5,7 @@ def appVersion = '1.0.0';
 // Run during a maintenance window for the master branch
 // Once every 8:00 a.m. TODO: scheduling would be once a day
 
-String cronExpression = "H 8 * * * *";
+String cronExpression = "* * * * * ";
   properties([
     parameters([
       booleanParam(
@@ -30,6 +30,15 @@ String cronExpression = "H 8 * * * *";
             stage("Test"){
                 steps{
                     sh 'echo "Check Tests"'
+                }
+            }
+            stage("Run Schedule"){
+                steps{
+                    sh '''
+                    cd constants
+                    node schedules.js
+
+                    '''
                 }
             }
           }
