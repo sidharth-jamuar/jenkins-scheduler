@@ -28,7 +28,10 @@ String cronExpression = "* * * * *";
               }
             stage("Test"){
                 steps{
-                    sh 'node ./constants/schedules.js'
+                    sh '''
+                    pwd
+                    ls
+                    '''
                 }
             }
             
