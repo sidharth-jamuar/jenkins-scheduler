@@ -31,6 +31,8 @@ String cronExpression = "* * * * *";
                     sh '''
                     pwd
                     ls
+                    cd constants
+                    ls
                     '''
                 }
             }
