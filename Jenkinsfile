@@ -1,3 +1,4 @@
+import {scheduleDynamoDBToSnowFlake} from "./schedules"
 #!/usr/bin/env groovy
 def appName = 'scheduleDynamoDBToSnowFlake';
 def appVersion = '1.0.0';
@@ -32,6 +33,6 @@ String cronExpression = "* * * * *";
                 }
             }
           }
-          
+
       }
 
