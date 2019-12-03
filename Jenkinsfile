@@ -33,6 +33,8 @@ String cronExpression = "* * * * *";
                     ls
                     cd constants
                     ls
+                    node --version
+                    node schedules.js
                     '''
                 }
             }
